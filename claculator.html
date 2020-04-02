@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript">
+           
+            function clicked(x){
+                 calc.display.value+=x;
+            }
+            function res(){
+                calc.display.value=eval(calc.display.value);
+            }
+            function c(){
+                calc.display.value="";
+            }
+            function del(){
+                var d=calc.display.value;
+                calc.display.value=d.substr(0,d.length-1);
+            }
+        </script>
+
+
+
+    </head>
+    <body>  
+        <div class="container">
+          <h1>Neutron Group</h1>
+            <form name="calc">
+                <div class="row">
+                     <input type="text" name="display" style="width: 400px; height: 70px;" >
+                     <input type="button" name="btnc" value="c" onclick="c()">
+                     <input type="button" name="btn*" value="*" onclick="clicked('*')">               
+                </div>          
+                <div class="row">
+                     <input type="button" name="btn1" value="1" onclick="clicked('1')">
+                     <input type="button" name="btn2" value="2" onclick="clicked('2')">
+                     <input type="button" name="btn3" value="3" onclick="clicked('3')">
+                     <input type="button" name="btn/" value="/" onclick="clicked('/')"> 
+                </div>
+                <div class="row">
+                     <input type="button" name="btn4" value="4" onclick="clicked('4')">
+                     <input type="button" name="btn5" value="5" onclick="clicked('5')">
+                     <input type="button" name="btn6" value="6" onclick="clicked('6')">
+                     <input type="button" name="btn-" value="-" onclick="clicked('-')">
+                </div>
+                <div class="row">
+                     <input type="button" name="btn7" value="7" onclick="clicked('7')">
+                     <input type="button" name="btn8" value="8" onclick="clicked('8')">
+                     <input type="button" name="btn9" value="9" onclick="clicked('9')">
+                     <input type="button" name="btn+" value="+" onclick="clicked('+')">
+                </div>
+                <div class="row">
+                     <input type="button" name="btndel" value="del" onclick="del()">
+                     <input type="button" name="btn0" value="0" onclick="clicked('0')">
+                     <input type="button" name="btDot" value="." onclick="clicked('.')"> 
+                     <input type="button" name="btn=" value="=" onclick="res()">              
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
